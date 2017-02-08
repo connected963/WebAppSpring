@@ -1,0 +1,11 @@
+.chat-row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 3px;
+    border-bottom-color: darkgrey;
+    border-radius: 100%;
+}
+
+.background-chat {
+    background-color: black;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${errorName}">Default error name</title>
+
+    <link href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/error.css" th:href="@{/css/error.css}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <div class="errorBackground">
+        <h1 class="errorCode" th:text="${errorCode}">Default error code</h1>
+        <p class="errorMessage" th:text="${errorMessage}">Default error message</p>
+        <p class="errorDate" th:text="${#calendars.format(errorDate, 'dd/MM/yyyy HH:mm')}">Default error date</p>
+
+    </div>
+</body>
+</html>

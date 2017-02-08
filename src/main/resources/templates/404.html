@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${errorName}">Default error name</title>
+
+    <link href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/error.css" th:href="@{/css/error.css}" rel="stylesheet" type="text/css"/>
+
+    <script th:src="@{/webjars/jquery/3.1.1-1/jquery.min.js}" type="application/javascript"></script>
+    <script th:src="@{/js/error.js}" type="application/javascript"></script>
+
+</head>
+
+<body>
+    <div class="errorBackground">
+        <p class="errorMessage" th:text="#{pageNotFound}" style="margin-left: 10%; margin-top: 10%; padding-bottom: 0px">Default page not found</p>
+        <h1 class="errorCode" th:text="${errorCode}" style="margin-top: 0%; padding-top: 0px">Default error code</h1>
+        <p class="errorMessage" th:text="${errorMessage}">Default error message</p>
+        <p class="errorDate" th:text="${#calendars.format(errorDate, 'dd/MM/yyyy HH:mm')}">Default error date</p>
+
+        <img th:src="@{/images/source.gif}" class="errorImage"/>
+
+    </div>
+</body>
+</html>

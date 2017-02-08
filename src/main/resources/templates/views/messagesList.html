@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://thymeleaf.org">
+
+    <head>
+        <title th:text="${appName}">Default page title</title>
+
+        <link href="../../static/css/message.css" th:href="@{/css/message.css}" rel="stylesheet" type="text/css"/>
+        <link href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <script src="webjars/jquery/3.1.1-1/jquery.min.js" type="application/javascript"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="row form-group">
+
+                <div class="col-md-10">
+                    <article th:each="message : ${messages}">
+                        <div class="chat-row">
+                            <table>
+                                <tr>
+                                    <td th:text="#{messageColumnUUID}">Default column type</td>
+                                    <td th:text="${message.guid}">Default UUID</td>
+                                </tr>
+
+                                <tr>
+                                    <td th:text="#{messageColumnOwner}">Default column type</td>
+                                    <td th:text="${message.owner}">Default owner</td>
+                                </tr>
+
+                                <tr>
+                                    <td th:text="#{messageColumnRecipient}">Default column type</td>
+                                    <td th:text="${message.recipient}">Default recipient</td>
+                                </tr>
+
+                                <tr>
+                                    <td th:text="#{messageColumnText}">Default column type</td>
+                                    <td th:text="${message.text}">Default text</td>
+                                </tr>
+
+                                <tr>
+                                    <td th:text="#{messageColumnDateTimeOfSend}">Default column type</td>
+                                    <td th:text="${#temporals.format(message.dateTimeOfSend, 'dd/MM/yyyy HH:mm')}">Default dateTimeOfSend</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: App in default mode
+boss: Anyone
+---
+
+spring:
+  profiles: development
+  application:
+    name: App in development mode
+
+boss: Developer
+---
+
+spring:
+  profiles: production
+  application:
+    name: App in production mode
+
+boss: Manager

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${appName}">Default page title</title>
+
+    <link href="../../static/css/message.css" th:href="@{/css/message.css}" rel="stylesheet" type="text/css"/>
+    <link href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <script src="webjars/jquery/3.1.1-1/jquery.min.js" type="application/javascript"></script>
+
+</head>
+<body class="background-chat">
+    <h1 th:text="#{emptyChat}" style="color: whitesmoke">Default text</h1>
+</body>
+</html>
